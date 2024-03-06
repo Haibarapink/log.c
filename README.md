@@ -1,15 +1,13 @@
-# log.c
-A simple logging library implemented in C99
-
+# log.hpp
+A simple head-only logging library implemented in cpp
+, and harbarapink rewrite [log.c](https://github.com/rxi/log.c) to a single hpp file which could be used in cpp.
 ![screenshot](https://cloud.githubusercontent.com/assets/3920290/23831970/a2415e96-0723-11e7-9886-f8f5d2de60fe.png)
 
 
 ## Usage
-**[log.c](src/log.c?raw=1)** and **[log.h](src/log.h?raw=1)** should be dropped
-into an existing project and compiled along with it. The library provides 6
-function-like macros for logging:
+include **[log.hpp](src/log.hpp?raw=1)** to your project
 
-```c
+```cpp
 log_trace(const char *fmt, ...);
 log_debug(const char *fmt, ...);
 log_info(const char *fmt, ...);
@@ -20,7 +18,7 @@ log_fatal(const char *fmt, ...);
 
 Each function takes a printf format string followed by additional arguments:
 
-```c
+```cpp
 log_trace("Hello %s", "world")
 ```
 
